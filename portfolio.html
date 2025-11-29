@@ -1,0 +1,398 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gayatri Ramesh Sathe — Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ---------- DARK IT THEME ---------- */
+        :root {
+            --p1: #4f8cff; /* Tech Blue */
+            --bg: linear-gradient(135deg,#040716,#0b1022,#111630);
+            --panel: #151a36;
+            --muted: #b3b7d4;
+            --shadow: 0 15px 40px rgba(0,0,0,.7);
+            --nav-h: 74px;
+            --max-w: 1200px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins",sans-serif;
+            background: var(--bg);
+            color: #e6e9ff;
+        }
+
+        /* ---------- NAV ---------- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-h);
+            background: #070c24;
+            border-bottom: 1px solid rgba(80,100,255,.25);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            max-width: var(--max-w);
+            width: 100%;
+            margin: auto;
+            padding: 0 22px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--p1)
+        }
+
+        .nav-center {
+            margin: auto;
+            display: flex;
+            gap: 20px
+        }
+
+            .nav-center a {
+                text-decoration: none;
+                color: #d0d6ff;
+                font-weight: 600;
+            }
+
+                .nav-center a:hover {
+                    color: var(--p1)
+                }
+
+        .btn {
+            background: var(--p1);
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .spacer {
+            height: calc(var(--nav-h) + 25px)
+        }
+
+        /* ---------- HERO ---------- */
+        main {
+            max-width: var(--max-w);
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            align-items: center;
+            background: linear-gradient(135deg,#0b1432,#111d4a);
+            padding: 34px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .title-big {
+            font-size: 50px;
+            font-weight: 700;
+            color: var(--p1);
+        }
+
+        .subtitle {
+            color: #cbd2ff;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .desc {
+            margin-top: 12px;
+            color: #aab0ff;
+            line-height: 1.6;
+        }
+
+        .actions {
+            margin-top: 22px
+        }
+
+        .btn-outline {
+            border: 2px solid var(--p1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: var(--p1);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        /* CIRCULAR PHOTO */
+        .profile-wrap {
+            width: 250px;
+            height: 250px;
+            background: #02052d;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(80,120,255,.6);
+            margin: auto;
+        }
+
+            .profile-wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        /* ---------- SECTIONS ---------- */
+        .section {
+            margin-top: 60px
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--p1);
+            font-weight: 700;
+        }
+
+        /* CARDS */
+        .card, .project {
+            background: var(--panel);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--p1);
+            color: #dfe3ff;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+
+        /* SKILLS */
+        .skill {
+            background: #111641;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .bar {
+            height: 8px;
+            background: #202977;
+            border-radius: 10px;
+            margin-top: 6px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: var(--p1)
+        }
+
+        /* CONTACT */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+            .contact a {
+                padding: 15px;
+                background: var(--panel);
+                border-radius: 14px;
+                text-decoration: none;
+                color: #dfe3ff;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                box-shadow: var(--shadow);
+            }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #8f96c9;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+
+            .nav-center {
+                display: none
+            }
+
+            .grid-2, .contact {
+                grid-template-columns: 1fr
+            }
+
+            .title-big {
+                font-size: 38px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-inner">
+            <div class="logo">Gayatri</div>
+
+            <nav class="nav-center">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="btn" href="#contact">Hire Me</a>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <main id="home">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <h1 class="title-big">Gayatri Ramesh Sathe</h1>
+                <div class="subtitle">Electronics & Telecommunication Engineering Student</div>
+                <p class="desc">
+                    Engineering student transitioning from Computer Engineering to ETX.
+                    Interested in VLSI, Embedded Systems, Data Science & Communication Engineering.
+                </p>
+
+                <div class="actions">
+                    <a class="btn" href="#projects">View Projects</a>
+                    <a class="btn-outline" href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="profile-wrap">
+                <img src="gayatri formal pic.jpeg" alt="Gayatri Sathe">
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    I am <strong>Gayatri Sathe</strong>, transitioning from Computer Engineering to ETX
+                    with focus on <strong>VLSI, Embedded Systems & Communication Engineering</strong>.
+                    I enjoy building real-world electronics projects using microcontrollers, simulations and firmware development.
+                </div>
+
+                <div class="card">
+                    <strong>Quick Info</strong><br><br>
+                    • College: MITAOE Pune <br>
+                    • Interests: VLSI, Embedded, IoT, Firmware <br>
+                    • Languages: C, C++, HTML, CSS <br>
+                    • Tools: STM32, MATLAB, Simulink
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education & Experience</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <strong>B.Tech — ETX Engineering</strong><br>
+                    MITAOE, Pune
+                </div>
+
+                <div class="card">
+                    <strong>Data Science Internship</strong><br>
+                    ML basics, visualization & preprocessing.
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="grid-2">
+                <div class="skill">C Programming<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+                <div class="skill">C++<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                <div class="skill">HTML & CSS<div class="bar"><div class="fill" style="width:95%"></div></div></div>
+                <div class="skill">MATLAB & Simulink<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+                <div class="skill">Embedded Systems<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                <div class="skill">Communication Systems<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="grid-2">
+                <div class="project">
+                    <strong>Air Quality Monitoring System</strong>
+                    <ul>
+                        <li>IoT sensor network</li>
+                        <li>Real-time data dashboard</li>
+                        <li>Alert notifications</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <strong>Smart Agriculture System</strong>
+                    <ul>
+                        <li>Weather analytics</li>
+                        <li>Auto irrigation control</li>
+                        <li>Cloud dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact">
+                <a href="mailto:202402060037@mitaoe.ac.in">📧 Email</a>
+                <a href="tel:+918530248132">📞 Phone</a>
+                <a href="https://www.linkedin.com/in/gayatri-sathe-73b4622ab/" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/GayatriSathe5605" target="_blank">💻 GitHub</a>
+            </div>
+        </section>
+
+        <footer>
+            © Gayatri Ramesh Sathe — Portfolio
+        </footer>
+
+    </main>
+
+</body>
+</html>
